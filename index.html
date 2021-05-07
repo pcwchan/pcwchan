@@ -1,0 +1,41 @@
+<html>
+<head>
+
+
+</head>
+
+<body>
+<div class="container-fluid row col-sm-12">
+<div class="col-sm-4">
+<p><input type="file" accept="image/*" name="image" id="filea" onchange="loadFilea(event)" style="display: none;"></p>
+<p><label for="filea" style="cursor: pointer;">Section One</label></p>
+<p><img id="outputa" width="400" height="400"/></p>
+</div>
+<div class="col-sm-4">
+<p><input type="file" accept="image/*" name="image" id="fileb" onchange="loadFileb(event)" style="display: none;"></p>
+<p><label for="fileb" style="cursor: pointer;">Section Two</label></p>
+<p><img id="outputb" width="400" height="400"/></p>
+</div>
+<div class="col-sm-4">
+<p><input type="file" accept="image/*" name="image" id="filec" onchange="loadFilec(event)" style="display: none;"></p>
+<p><label for="filec" style="cursor: pointer;">Section Three</label></p>
+<p><img id="outputc" width="400" height="400"/></p>
+</div>
+</div>
+<script>
+var loadFilea = function(event) {
+var image = document.getElementById('outputa');
+image.src = URL.createObjectURL(event.target.files[0]);
+};
+var loadFileb = function(event) {
+var image = document.getElementById('outputb');
+image.src = URL.createObjectURL(event.target.files[0]);
+};
+var loadFilec = function(event) {
+var image = document.getElementById('outputc');
+image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
+</body>
+
+</html>
